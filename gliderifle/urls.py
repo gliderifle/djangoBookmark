@@ -1,5 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
+from bookmark import views
 
 urlpatterns = [
     # Examples:
@@ -7,5 +8,7 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^bookmark/', include('bookmark.urls')),
+    #url(r'^bookmark/$', views.bookmark_list),
+    url(r'^bookmark/$', views.BookmarkLV.as_view(), name="bookmark_list"),
+    # url(r'^bookmark/', include('bookmark.urls')),
 ]
