@@ -9,7 +9,8 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     #url(r'^bookmark/$', views.bookmark_list),
-    url(r'^bookmark/$', views.BookmarkLV.as_view(), name="bookmark_list"),
-    url(r'^bookmark/(?P<pk>\d+)$', views.bookmark_detail, name="bookmark_detail"),
-    # url(r'^bookmark/', include('bookmark.urls')),
+    #url(r'^bookmark/$', views.BookmarkLV.as_view(), name="bookmark_list"),
+    #url(r'^bookmark/(?P<pk>\d+)$', views.bookmark_detail, name="bookmark_detail"),
+    url(r'^bookmark/', include('bookmark.urls')),
+    url(r'blog/',include('blog.urls')),
 ]

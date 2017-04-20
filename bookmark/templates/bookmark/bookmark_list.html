@@ -1,0 +1,8 @@
+<h1>bookmark_list.html입니다.</h1>
+<ul>
+{% for bookmark in bookmark_list %}
+<li>
+    {{ bookmark.title }} : <a href="{% url "bookmark_detail" bookmark.pk %}">{{ bookmark.url }}</a>
+</li>
+{% endfor %}
+</ul>
